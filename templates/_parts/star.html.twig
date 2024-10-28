@@ -1,0 +1,8 @@
+{% set stars = (rating / 2) | round(0, 'floor') %}
+{% for i in 1..5 %}
+    {% if i <= stars %}
+        <i class="bi bi-star-fill text-primary"></i> {# Étoile pleine #}
+    {% else %}
+        <i class="bi bi-star-fill"></i> {# Étoile vide #}
+    {% endif %}
+{% endfor %}

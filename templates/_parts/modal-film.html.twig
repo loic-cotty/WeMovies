@@ -1,0 +1,23 @@
+<button id="btn-modal" class="d-none" data-bs-target="#modal-film" data-bs-toggle="modal">modal</button>
+<div class="modal modal-lg" tabindex="-1" id="modal-film">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close float-end p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                <iframe class="mx-auto mb-4" width="760" height="450" src="{{ youtube_url }}{{ film.videos.key }}"
+                        title="{{ film.title }}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+                <h5>{{ film.videos.name }}</h5>
+                <div class="d-flex justify-content-start gap-md-3 gap-0">
+                    <div class="text-secondary">Film : {{ film.title }}</div>
+                    <div>{% include '_parts/star.html.twig' with { 'rating': film.vote_average } %}</div>
+                    <span class="bg-black text-warning px-2">{{ film.vote_average/2 }}</span>
+                    <span>pour {{ film.vote_count }} utilisateurs</span>
+                </div>
+                <p class="py-3">{{ film.overview }}</p>
+            </div>
+        </div>
+    </div>
+</div>

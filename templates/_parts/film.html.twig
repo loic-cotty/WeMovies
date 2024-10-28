@@ -1,0 +1,15 @@
+<div class="row mb-4 px-5">
+    <div class="col-2">
+        <img class="w-100" src="https://image.tmdb.org/t/p/w154/{{ film.poster_path }}" alt="{{ film.title }}" title="{{ film.title }}"/>
+    </div>
+    <div class="col-10 text-secondary">
+        <div class="d-flex justify-content-start gap-md-3 gap-0">
+            <h5>{{ film.title }}</h5>
+            <div>{% include '_parts/star.html.twig' with { 'rating': film.vote_average } %}</div>
+            <span>({{ film.vote_count }} votes)</span>
+        </div>
+        <span>{{ film.release_date|date("Y") }}</span>
+        <p>{{ film.overview }}</p>
+        <button class="btn btn-sm btn-primary rounded-4 px-3 float-end modal-button" data-id="{{ film.id }}">Voir le détail</button>
+    </div>
+</div>
