@@ -3,6 +3,7 @@
 ## Launch app
 
 Clone the project from GitHub.
+Complete .env file with TMDB_API_TOKEN value
 
 From your terminal, execute this commands
 
