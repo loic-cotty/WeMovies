@@ -2,9 +2,14 @@
 
 ## Launch app
 
-From your terminal, execute this command
+Clone the project from GitHub.
+
+From your terminal, execute this commands
 
 ```
+composer install
+npm install
+npm run dev
 docker-compose up -d
 ```
 
